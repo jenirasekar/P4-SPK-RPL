@@ -1,0 +1,10 @@
+library
+1. jquery
+2. ajax
+3. datatables (?)
+
+framework
+1. bootstrap 5
+
+others
+1. laravel debugbar

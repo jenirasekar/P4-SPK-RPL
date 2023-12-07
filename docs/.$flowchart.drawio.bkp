@@ -1,0 +1,47 @@
+<mxfile host="Electron" modified="2023-12-06T15:16:01.246Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="7bePlIRDUw9EmiaJYXSs" version="22.1.2" type="device">
+  <diagram id="1QueU7AP6pSzV2VAQVWn" name="Page-1">
+    <mxGraphModel dx="1098" dy="640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PRzcdqHKyqyBL9M1nd8y-16" value="KassaPlus" style="swimlane;html=1;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="29" y="50" width="770" height="510" as="geometry" />
+        </mxCell>
+        <mxCell id="PRzcdqHKyqyBL9M1nd8y-17" value="Administrator" style="swimlane;html=1;startSize=20;" parent="PRzcdqHKyqyBL9M1nd8y-16" vertex="1">
+          <mxGeometry y="20" width="380" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="PRzcdqHKyqyBL9M1nd8y-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="PRzcdqHKyqyBL9M1nd8y-17" source="PRzcdqHKyqyBL9M1nd8y-20" target="PRzcdqHKyqyBL9M1nd8y-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PRzcdqHKyqyBL9M1nd8y-20" value="Start" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="PRzcdqHKyqyBL9M1nd8y-17" vertex="1">
+          <mxGeometry x="11" y="30" width="59" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PRzcdqHKyqyBL9M1nd8y-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="PRzcdqHKyqyBL9M1nd8y-17" source="PRzcdqHKyqyBL9M1nd8y-21" target="PRzcdqHKyqyBL9M1nd8y-23" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PRzcdqHKyqyBL9M1nd8y-21" value="Login" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="PRzcdqHKyqyBL9M1nd8y-17" vertex="1">
+          <mxGeometry x="111" y="32.5" width="79" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="PRzcdqHKyqyBL9M1nd8y-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="PRzcdqHKyqyBL9M1nd8y-17" source="PRzcdqHKyqyBL9M1nd8y-23" target="PRzcdqHKyqyBL9M1nd8y-27" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="266" y="145" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PRzcdqHKyqyBL9M1nd8y-23" value="Sudah&lt;br&gt;punya akun?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="PRzcdqHKyqyBL9M1nd8y-17" vertex="1">
+          <mxGeometry x="231" y="25" width="69" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="PRzcdqHKyqyBL9M1nd8y-27" value="Registrasi" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="PRzcdqHKyqyBL9M1nd8y-17" vertex="1">
+          <mxGeometry x="226" y="117.5" width="79" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="PRzcdqHKyqyBL9M1nd8y-29" value="Tidak" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="PRzcdqHKyqyBL9M1nd8y-17" vertex="1">
+          <mxGeometry x="271" y="90" width="39" height="22.5" as="geometry" />
+        </mxCell>
+        <mxCell id="PRzcdqHKyqyBL9M1nd8y-18" value="Petugas" style="swimlane;html=1;startSize=20;" parent="PRzcdqHKyqyBL9M1nd8y-16" vertex="1">
+          <mxGeometry x="380" y="20" width="390" height="490" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
