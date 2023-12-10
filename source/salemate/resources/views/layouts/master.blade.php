@@ -28,7 +28,7 @@
 
         {{-- Content --}}
         <section class="content">
-            <div class="container-fluid d-flex">
+            <div class="container-fluid">
                 @yield('content')
             </div>
         </section>
