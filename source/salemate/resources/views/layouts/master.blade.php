@@ -18,13 +18,15 @@
         rel="stylesheet">
 
     {{-- my CSS --}}
-    <link rel="stylesheet" href="{!! url('asset/css/style.css') !!}">
+    <link rel="stylesheet" href="{!! url('assets/css/style.css') !!}">
 </head>
 
 <body>
     <div class="wrapper">
         {{-- Sidebar --}}
-        @include('layouts.sidebar')
+        <div class="main-sidebar">
+            @include('layouts.sidebar')
+        </div>
 
         {{-- Content --}}
         <section class="content">
@@ -35,7 +37,7 @@
     </div>
 
     {{-- Bootstrap JS --}}
-    <script src="{!! url('asset/js/bootstrap.bundle.min.js') !!}"></script>
+    <script src="{!! url('assets/js/bootstrap.bundle.min.js') !!}"></script>
 </body>
 
 </html>

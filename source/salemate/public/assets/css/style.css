@@ -1,3 +1,26 @@
 body {
     background-color: #dfdfdf;
 }
+
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-areas: "sidebar main";
+    grid-template-columns: 4.5rem auto;
+}
+
+.main-sidebar {
+    grid-area: sidebar;
+}
+
+.main-sidebar .sidebar {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    background-color: white;
+}
+
+.content {
+    grid-area: main;
+}
