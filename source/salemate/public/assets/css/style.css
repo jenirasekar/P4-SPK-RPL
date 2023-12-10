@@ -1,5 +1,10 @@
+:root {
+    --red: #d24848;
+}
+
 body {
     background-color: #dfdfdf;
+    font-family: "Montserrat", sans-serif;
 }
 
 .wrapper {
@@ -23,4 +28,21 @@ body {
 
 .content {
     grid-area: main;
+}
+
+.content h1 {
+    font-weight: 700;
+}
+
+.content .login-btn {
+    background-color: var(--red);
+    border-radius: 50px;
+    color: white;
+    width: 180px !important;
+    height: 50px !important;
+}
+
+.content .login-btn img {
+    width: 30px;
+    height: 30px;
 }
