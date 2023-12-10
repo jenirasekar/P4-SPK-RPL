@@ -8,7 +8,7 @@
     <title>SaleMate</title>
 
     {{-- Bootstrap CSS --}}
-    <link rel="stylesheet" href="{!! url('asset/css/bootstrap.min.css') !!}">
+    <link rel="stylesheet" href="{!! url('assets/css/bootstrap.min.css') !!}">
 
     {{-- Google fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
