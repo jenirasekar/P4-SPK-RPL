@@ -9,7 +9,7 @@
 
         <div class="col-2">
             <a href="/" class="login-btn btn btn-danger btn-lg">
-                <img src="{!! url('assets/img/icons/person-icon.svg') !!}" alt="person">
+                <img src="{!! url('assets/img/icons/person-icon-white.svg') !!}" alt="person">
                 Login
             </a>
         </div>
