@@ -16,6 +16,8 @@ body {
 
 .main-sidebar {
     grid-area: sidebar;
+    position: fixed;
+    width: 4.5rem;
 }
 
 .main-sidebar .sidebar {
@@ -24,6 +26,22 @@ body {
     flex-direction: column;
     flex-shrink: 0;
     background-color: white;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.main-sidebar .sidebar nav ul .main-nav-icons {
+    position: absolute;
+    top: 25%;
+    left: 0.7rem;
+}
+
+.main-sidebar .sidebar nav ul .bottom-nav-icon {
+    position: absolute;
+    bottom: 5%;
+    left: 0.7rem;
 }
 
 .content {
