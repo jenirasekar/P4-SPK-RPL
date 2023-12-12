@@ -1,17 +1,15 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="row mt-5">
-        <div class="col-10">
-            <h1>Home page</h1>
-            <p>Silakan login untuk melihat data terbatas</p>
-        </div>
+    <div class="mt-5">
+        <h1>Selamat datang, Jenira</h1>
+        <p>Anda login sebagai admin</p>
+    </div>
 
-        <div class="col-2">
-            <a href="/" class="login-btn btn btn-danger btn-lg">
-                <img src="{!! url('assets/img/icons/person-icon-white.svg') !!}" alt="person">
-                Login
-            </a>
-        </div>
+    <div class="waves">
+        <img src="{!! url('assets/img/wave.svg') !!}" alt="wave" class="wave1">
+        <img src="{!! url('assets/img/wave2.svg') !!}" alt="wave" class="wave2">
+        <img src="{!! url('assets/img/wave3.svg') !!}" alt="wave" class="wave3">
+        <div class="wall"></div>
     </div>
 @endsection
