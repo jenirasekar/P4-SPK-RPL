@@ -10,17 +10,17 @@ body {
 .wrapper {
     width: 100%;
     display: grid;
-    grid-template-areas: "sidebar main";
+    grid-template-areas: "sidebar content";
     grid-template-columns: 4.5rem auto;
 }
 
-.main-sidebar {
+.sidebar-wrapper {
     grid-area: sidebar;
     position: fixed;
     width: 4.5rem;
 }
 
-.main-sidebar .sidebar {
+.sidebar-wrapper .sidebar {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -32,20 +32,20 @@ body {
     left: 0;
 }
 
-.main-sidebar .sidebar nav ul .main-nav-icons {
+.sidebar-wrapper .sidebar nav ul .main-nav-icons {
     position: absolute;
     top: 25%;
     left: 0.7rem;
 }
 
-.main-sidebar .sidebar nav ul .bottom-nav-icon {
+.sidebar-wrapper .sidebar nav ul .bottom-nav-icon {
     position: absolute;
     bottom: 5%;
     left: 0.7rem;
 }
 
-.content {
-    grid-area: main;
+.content-wrapper {
+    grid-area: content;
 }
 
 .content h1 {

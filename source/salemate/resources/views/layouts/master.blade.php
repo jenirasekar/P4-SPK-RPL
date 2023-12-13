@@ -24,16 +24,18 @@
 <body>
     <div class="wrapper">
         {{-- Sidebar --}}
-        <div class="main-sidebar">
+        <div class="sidebar-wrapper">
             @include('layouts.sidebar')
         </div>
 
         {{-- Content --}}
-        <section class="content">
-            <div class="container-fluid">
-                @yield('content')
-            </div>
-        </section>
+        <div class="content-wrapper">
+            <section class="content">
+                <div class="container-fluid">
+                    @yield('content')
+                </div>
+            </section>
+        </div>
     </div>
 
     {{-- Bootstrap JS --}}
