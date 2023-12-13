@@ -46,6 +46,8 @@ body {
 
 .content-wrapper {
     grid-area: content;
+    grid-template-areas: "produk keranjang";
+    grid-template-columns: auto 345px;
 }
 
 .content h1 {
@@ -105,33 +107,49 @@ body {
     background-color: var(--red);
 }
 
-@media screen and (max-width: 768px) {
-    .content .waves .wave1,
-    .content .waves .wave2,
-    .content .waves .wave3 {
-        position: relative;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-    }
+.content .produk {
+    grid-area: produk;
+    left: 0;
+    width: 72.5rem;
+}
 
-    .content .waves .wave1 {
-        position: absolute;
-        top: 10%;
-    }
+.content .produk .gambar-produk {
+    background-color: #d9d9d9;
+    height: 188px;
+}
 
-    .content .waves .wave2 {
-        position: relative;
-        top: 15%;
-    }
+.content .keranjang {
+    grid-area: keranjang;
+    position: fixed;
+    width: 345px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    background-color: white;
+    justify-content: end;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
 
-    .content .waves .wave3 {
-        position: absolute;
-        top: 20%;
-    }
+.search-bar {
+    width: 324px;
+}
 
-    .content .waves .wall {
-        position: relative;
-        top: 20%;
-    }
+.search-bar button {
+    height: 67px;
+    border-radius: 30px;
+    background-color: #f5f5f5;
+}
+
+.search-bar button img {
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+.search-bar button p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    padding-left: 10px;
 }

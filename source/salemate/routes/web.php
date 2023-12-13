@@ -18,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [Controller::class, 'index'])->name('home');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+
+Route::get('/produk', [DashboardController::class, 'indexP'])->name('transaksi.index');

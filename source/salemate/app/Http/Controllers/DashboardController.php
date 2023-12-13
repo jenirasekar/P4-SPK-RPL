@@ -12,4 +12,10 @@ class DashboardController extends Controller
             'title' => 'Dashboard'
         ]);
     }
+    public function indexP()
+    {
+        return view('transaksi.index', [
+            'title' => 'Dashboard'
+        ]);
+    }
 }
