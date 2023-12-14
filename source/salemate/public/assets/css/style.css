@@ -54,6 +54,10 @@ body {
     font-weight: 700;
 }
 
+.content p {
+    font-size: 1.3rem;
+}
+
 .content .login-btn {
     background-color: var(--red);
     border-radius: 50px;
