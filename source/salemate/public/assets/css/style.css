@@ -58,7 +58,7 @@ body {
     font-size: 1.3rem;
 }
 
-.content .login-btn {
+.login-btn {
     background-color: var(--red);
     border-radius: 50px;
     color: white;
@@ -66,20 +66,20 @@ body {
     height: 50px !important;
 }
 
-.content .login-btn img {
+.login-btn img {
     width: 30px;
     height: 30px;
     margin-right: 5px;
 }
 
-.content .waves {
+.waves {
     position: relative;
     height: 100vh;
 }
 
-.content .waves .wave1,
-.content .waves .wave2,
-.content .waves .wave3 {
+.waves .wave1,
+.waves .wave2,
+.waves .wave3 {
     position: relative;
     bottom: 0;
     top: 0;
@@ -87,31 +87,31 @@ body {
     width: 100%;
 }
 
-.content .waves .wave1 {
+.waves .wave1 {
     position: absolute;
     top: 15%;
     opacity: 0.7;
 }
 
-.content .waves .wave2 {
+.waves .wave2 {
     position: relative;
     top: 20%;
     opacity: 0.5;
 }
 
-.content .waves .wave3 {
+.waves .wave3 {
     position: absolute;
     top: 25%;
 }
 
-.content .waves .wall {
+.waves .wall {
     position: relative;
     top: 25%;
     height: 208px;
     background-color: var(--red);
 }
 
-.content .produk {
+.produk {
     grid-area: produk;
     left: 0;
     width: 72.5rem;
@@ -119,34 +119,34 @@ body {
     justify-content: space-between;
 }
 
-.content .produk .card {
+.produk .card {
     width: 270px;
     border-radius: 15px;
 }
 
-.content .produk .gambar-produk {
+.produk .gambar-produk {
     background-color: #d9d9d9;
     height: 188px;
     border-radius: 20px;
 }
 
-.content .produk .detail-produk .nama {
+.produk .detail-produk .nama {
     font-weight: 600;
     font-size: 1.2rem;
     margin-top: 10px;
     margin-bottom: 0;
 }
 
-.content .produk .detail-produk .deskripsi {
+.produk .detail-produk .deskripsi {
     font-size: 0.8rem;
 }
 
-.content .produk .detail-produk .harga {
+.produk .detail-produk .harga {
     color: var(--red);
     font-weight: 600;
 }
 
-.content .keranjang {
+.keranjang {
     grid-area: keranjang;
     position: fixed;
     width: 345px;
@@ -160,29 +160,29 @@ body {
     right: 0;
 }
 
-.content .keranjang h3 {
+.keranjang h3 {
     font-weight: 600;
     margin-top: 30px;
     margin-left: 20px;
     margin-bottom: 40px;
 }
 
-.content .keranjang .list-produk {
+.keranjang .list-produk {
     margin-left: 20px;
 }
 
-.content .keranjang .gambar-produk {
+.keranjang .gambar-produk {
     width: 80px;
     height: 80px;
     border-radius: 10px;
 }
 
-.content .keranjang .nama {
+.keranjang .nama {
     font-weight: 600;
     font-size: 1.2rem;
 }
 
-.content .keranjang .harga {
+.keranjang .harga {
     color: var(--red);
     font-weight: 600;
     font-size: 1rem;
