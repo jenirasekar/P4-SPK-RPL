@@ -115,11 +115,35 @@ body {
     grid-area: produk;
     left: 0;
     width: 72.5rem;
+    margin-top: 8rem;
+    justify-content: space-between;
+}
+
+.content .produk .card {
+    width: 270px;
+    border-radius: 15px;
 }
 
 .content .produk .gambar-produk {
     background-color: #d9d9d9;
     height: 188px;
+    border-radius: 20px;
+}
+
+.content .produk .detail-produk .nama {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.content .produk .detail-produk .deskripsi {
+    font-size: 0.8rem;
+}
+
+.content .produk .detail-produk .harga {
+    color: var(--red);
+    font-weight: 600;
 }
 
 .content .keranjang {
@@ -131,10 +155,37 @@ body {
     flex-direction: column;
     flex-shrink: 0;
     background-color: white;
-    justify-content: end;
     top: 0;
     bottom: 0;
     right: 0;
+}
+
+.content .keranjang h3 {
+    font-weight: 600;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+.content .keranjang .list-produk {
+    margin-left: 20px;
+}
+
+.content .keranjang .gambar-produk {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.content .keranjang .nama {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.content .keranjang .harga {
+    color: var(--red);
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .search-bar {
