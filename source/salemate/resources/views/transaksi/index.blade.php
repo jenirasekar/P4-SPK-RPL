@@ -108,9 +108,19 @@
                     <p class="nama">
                         Nama Produk
                     </p>
-                    <p class="harga">
-                        Rp.3.000
-                    </p>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="harga">
+                                Rp.3.000
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <div class="qty-btn d-flex">
+                                <button class="btn btn-sm btn-danger">+</button>
+                                <button class="btn btn-sm btn-danger">-</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
