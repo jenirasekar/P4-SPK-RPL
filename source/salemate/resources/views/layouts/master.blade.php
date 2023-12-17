@@ -40,6 +40,9 @@
 
     {{-- Bootstrap JS --}}
     <script src="{!! url('assets/js/bootstrap.bundle.min.js') !!}"></script>
+
+    {{-- Iconify --}}
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
 </body>
 
 </html>
