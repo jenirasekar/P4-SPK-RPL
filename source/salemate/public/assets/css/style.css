@@ -170,7 +170,7 @@ body {
     right: 0;
 }
 
-.keranjang h3 {
+.keranjang h5 {
     font-weight: 600;
     margin-top: 30px;
     margin-left: 20px;
@@ -182,39 +182,57 @@ body {
 }
 
 .keranjang .gambar-produk {
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
     border-radius: 10px;
 }
 
 .keranjang .nama {
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .keranjang .harga {
     color: var(--red);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.8rem;
+}
+
+.keranjang .qty-btn {
+    height: 20px;
+}
+
+.keranjang .qty-btn input {
+    width: 80px;
+}
+
+.keranjang .qty-btn .btn {
+    width: 20px;    
+    height: 20px;
+    border-radius: 5px;
+}
+
+.keranjang .qty-btn svg {
+    width: 20px;    
+    height: 20px;
 }
 
 .search-bar {
-    width: 324px;
+    width: 320px;
 }
 
 .search-bar button {
-    height: 67px;
+    height: 47px;
     border-radius: 30px;
     background-color: #f5f5f5;
 }
 
-.search-bar button img {
-    margin-top: 10px;
+.search-bar button svg {
     padding-left: 5px;
 }
 
 .search-bar button p {
-    margin-top: 10px;
-    font-size: 1.3rem;
+    margin-top: 5px;
+    font-size: 1rem;
     padding-left: 10px;
 }
