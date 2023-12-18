@@ -32,16 +32,26 @@ body {
     left: 0;
 }
 
-.sidebar-wrapper .sidebar nav ul .main-nav-icons {
+.sidebar nav ul .main-nav-icons {
     position: absolute;
     top: 25%;
-    left: 0.7rem;
+    left: 0.3rem;
 }
 
-.sidebar-wrapper .sidebar nav ul .bottom-nav-icon {
+.sidebar nav ul .bottom-nav-icon {
     position: absolute;
     bottom: 5%;
-    left: 0.7rem;
+    left: 0.3rem;
+}
+
+.nav .nav-item svg {
+    width: 30px;
+    height: 30px;
+    color: black !important;
+}
+
+.nav .nav-item svg:hover {
+    color: var(--red) !important;
 }
 
 .content-wrapper {
