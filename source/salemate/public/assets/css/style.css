@@ -54,10 +54,8 @@ body {
     color: var(--red) !important;
 }
 
-.content-wrapper {
+.content {
     grid-area: content;
-    grid-template-areas: "produk keranjang";
-    grid-template-columns: auto 345px;
 }
 
 .content h1 {
@@ -122,9 +120,7 @@ body {
 }
 
 .produk {
-    grid-area: produk;
     left: 0;
-    width: 72.5rem;
     margin-top: 8rem;
     justify-content: space-between;
 }
@@ -156,7 +152,7 @@ body {
     font-weight: 600;
 }
 
-.keranjang {
+/* .keranjang {
     grid-area: keranjang;
     position: fixed;
     width: 345px;
@@ -215,7 +211,7 @@ body {
 .keranjang .qty-btn svg {
     width: 20px;    
     height: 20px;
-}
+} */
 
 .search-bar {
     width: 320px;

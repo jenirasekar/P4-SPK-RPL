@@ -100,47 +100,4 @@
             </div>
         </div>
         {{-- ./card produk --}}
-
-        {{-- Keranjang --}}
-        <div class="keranjang">
-            <h5>Keranjang</h5>
-            <div class="list-produk row">
-                <div class="col-4 gambar-produk" style="background-color: black">
-                    <img src="" alt="">
-                </div>
-                <div class="col-8">
-                    <p class="nama">
-                        Nama Produk
-                    </p>
-                    <div class="row">
-                        <div class="col-6">
-                            <p class="harga">
-                                Rp. 3.000
-                            </p>
-                        </div>
-                        <div class="col-6">
-                            <div class="qty-btn d-flex justify-content-between">
-                                <button class="btn btn-sm btn-danger">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"  
-                                        viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M18 11H6a2 2 0 0 0 0 4h12a2 2 0 0 0 0-4" />
-                                    </svg>
-                                </button>
-                                <input type="text" name="" id="" class="form-control" value="1000"
-                                    readonly>
-                                <button class="btn btn-sm btn-danger">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-                                        viewBox="0 0 24 24">
-                                        <path fill="currentColor"
-                                            d="M18 10h-4V6a2 2 0 0 0-4 0l.071 4H6a2 2 0 0 0 0 4l4.071-.071L10 18a2 2 0 0 0 4 0v-4.071L18 14a2 2 0 0 0 0-4" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{-- ./keranjang --}}
-@endsection
+    @endsection
