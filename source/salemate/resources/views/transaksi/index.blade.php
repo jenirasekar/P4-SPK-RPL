@@ -25,7 +25,7 @@
         </div>
 
         {{-- Card produk --}}
-        <div class="row produk">
+        {{-- <div class="row produk">
             <div class="card col-3">
                 <div class="card-body">
                     <div class="gambar-produk">
@@ -96,6 +96,24 @@
                             Rp. 3.000
                         </p>
                     </div>
+                </div>
+            </div>
+        </div> --}}
+
+        <div class="produk mt-5 d-flex flex-lg-wrap gap-4 p-1">
+            <div class="card">
+                <div class="card-header">
+                    <img src="{!! url('assets/img/bluebell.jpg') !!}" alt="blue bell" width="120" height="120">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="{!! url('assets/img/bluebell.jpg') !!}" alt="blue bell" width="120" height="120">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="{!! url('assets/img/bluebell.jpg') !!}" alt="blue bell" width="120" height="120">
                 </div>
             </div>
         </div>
