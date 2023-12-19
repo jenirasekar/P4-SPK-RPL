@@ -29,11 +29,11 @@
         </div>
 
         {{-- Content --}}
-        <section class="content">
-            <div class="container-fluid">
+        <div class="content-wrapper">
+            <section class="content">
                 @yield('content')
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
 
     {{-- Bootstrap JS --}}

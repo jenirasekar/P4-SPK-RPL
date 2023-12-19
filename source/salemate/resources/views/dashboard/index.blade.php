@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="mt-5">
+    <div class="container-fluid mt-5">
         <h1>Selamat datang, Jenira</h1>
         <p>Anda login sebagai admin</p>
     </div>

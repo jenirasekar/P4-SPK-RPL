@@ -54,7 +54,7 @@ body {
     color: var(--red) !important;
 }
 
-.content {
+.content-wrapper {
     grid-area: content;
 }
 
@@ -151,67 +151,6 @@ body {
     color: var(--red);
     font-weight: 600;
 }
-
-/* .keranjang {
-    grid-area: keranjang;
-    position: fixed;
-    width: 345px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    background-color: white;
-    top: 0;
-    bottom: 0;
-    right: 0;
-}
-
-.keranjang h5 {
-    font-weight: 600;
-    margin-top: 30px;
-    margin-left: 20px;
-    margin-bottom: 40px;
-}
-
-.keranjang .list-produk {
-    margin-left: 20px;
-}
-
-.keranjang .gambar-produk {
-    width: 65px;
-    height: 65px;
-    border-radius: 10px;
-}
-
-.keranjang .nama {
-    font-weight: 600;
-    font-size: 1rem;
-}
-
-.keranjang .harga {
-    color: var(--red);
-    font-weight: 600;
-    font-size: 0.8rem;
-}
-
-.keranjang .qty-btn {
-    height: 20px;
-}
-
-.keranjang .qty-btn input {
-    width: 80px;
-}
-
-.keranjang .qty-btn .btn {
-    width: 20px;    
-    height: 20px;
-    border-radius: 5px;
-}
-
-.keranjang .qty-btn svg {
-    width: 20px;    
-    height: 20px;
-} */
 
 .search-bar {
     width: 320px;
