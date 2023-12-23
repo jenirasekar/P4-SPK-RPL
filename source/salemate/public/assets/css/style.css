@@ -119,38 +119,31 @@ body {
     background-color: var(--red);
 }
 
-/* .produk {
-    left: 0;
-    margin-top: 8rem;
-    justify-content: space-between;
+.produk {
+    width: 100%;
 }
 
 .produk .card {
-    width: 270px;
-    border-radius: 15px;
+    width: 220px;
 }
 
-.produk .gambar-produk {
-    background-color: #d9d9d9;
-    height: 188px;
-    border-radius: 20px;
+.produk .card .card-header{
+    margin: auto;
+    border-radius: 5px;
 }
 
-.produk .detail-produk .nama {
+.produk .card img {
+    width: 100%;
+}
+
+.produk .card .card-footer p {
+    font-size: 0.9rem;
     font-weight: 600;
-    font-size: 1.2rem;
-    margin-top: 10px;
-    margin-bottom: 0;
-}
-
-.produk .detail-produk .deskripsi {
-    font-size: 0.8rem;
-}
-
-.produk .detail-produk .harga {
     color: var(--red);
-    font-weight: 600;
-} */
+}
+.produk .card .card-footer button {
+    font-size: 10px;
+}
 
 .search-bar {
     width: 320px;

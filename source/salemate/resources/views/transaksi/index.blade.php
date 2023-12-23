@@ -25,97 +25,176 @@
         </div>
 
         {{-- Card produk --}}
-        {{-- <div class="row produk">
-            <div class="card col-3">
-                <div class="card-body">
-                    <div class="gambar-produk">
-
-                    </div>
-                    <div class="detail-produk">
-                        <p class="nama">
-                            Nama Produk
-                        </p>
-                        <p class="deskripsi">
-                            Deskripsi produk
-                        </p>
-                        <p class="harga">
-                            Rp. 3.000
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="card col-3">
-                <div class="card-body">
-                    <div class="gambar-produk">
-
-                    </div>
-                    <div class="detail-produk">
-                        <p class="nama">
-                            Nama Produk
-                        </p>
-                        <p class="deskripsi">
-                            Deskripsi produk
-                        </p>
-                        <p class="harga">
-                            Rp. 3.000
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="card col-3">
-                <div class="card-body">
-                    <div class="gambar-produk">
-
-                    </div>
-                    <div class="detail-produk">
-                        <p class="nama">
-                            Nama Produk
-                        </p>
-                        <p class="deskripsi">
-                            Deskripsi produk
-                        </p>
-                        <p class="harga">
-                            Rp. 3.000
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="card col-3">
-                <div class="card-body">
-                    <div class="gambar-produk">
-
-                    </div>
-                    <div class="detail-produk">
-                        <p class="nama">
-                            Nama Produk
-                        </p>
-                        <p class="deskripsi">
-                            Deskripsi produk
-                        </p>
-                        <p class="harga">
-                            Rp. 3.000
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-
-        <div class="produk mt-5 d-flex flex-lg-wrap gap-4 p-1">
+        <div class="produk mt-5 d-flex flex-lg-wrap gap-4 justify-content-center">
             <div class="card">
                 <div class="card-header">
-                    <img src="{!! url('assets/img/bluebell.jpg') !!}" alt="blue bell" width="120" height="120">
+                    <img src="{!! url('assets/img/bluebell.jpg') !!}" alt="blue bell">
+                </div>
+                <div class="card-body">
+                    <p class="m-0 text-justify">Blue Bell</p>
+                </div>
+                <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                    <p class="m-0">Rp. 3.000</p>
+                    <button class="btn btn-sm btn-outline-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 4 0v1h-4Zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2Z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header">
-                    <img src="{!! url('assets/img/bluebell.jpg') !!}" alt="blue bell" width="120" height="120">
+                    <img src="{!! url('assets/img/bluebell.jpg') !!}" alt="blue bell">
+                </div>
+                <div class="card-body">
+                    <p class="m-0 text-justify">Blue Bell</p>
+                </div>
+                <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                    <p class="m-0">Rp. 3.000</p>
+                    <button class="btn btn-sm btn-outline-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 4 0v1h-4Zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2Z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header">
-                    <img src="{!! url('assets/img/bluebell.jpg') !!}" alt="blue bell" width="120" height="120">
+                    <img src="{!! url('assets/img/bluebell.jpg') !!}" alt="blue bell">
+                </div>
+                <div class="card-body">
+                    <p class="m-0 text-justify">Blue Bell</p>
+                </div>
+                <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                    <p class="m-0">Rp. 3.000</p>
+                    <button class="btn btn-sm btn-outline-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 4 0v1h-4Zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2Z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-        </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="{!! url('assets/img/bluebell.jpg') !!}" alt="blue bell">
+                </div>
+                <div class="card-body">
+                    <p class="m-0 text-justify">Blue Bell</p>
+                </div>
+                <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                    <p class="m-0">Rp. 3.000</p>
+                    <button class="btn btn-sm btn-outline-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 4 0v1h-4Zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="{!! url('assets/img/bluebell.jpg') !!}" alt="blue bell">
+                </div>
+                <div class="card-body">
+                    <p class="m-0 text-justify">Blue Bell</p>
+                </div>
+                <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                    <p class="m-0">Rp. 3.000</p>
+                    <button class="btn btn-sm btn-outline-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 4 0v1h-4Zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="{!! url('assets/img/bluebell.jpg') !!}" alt="blue bell">
+                </div>
+                <div class="card-body">
+                    <p class="m-0 text-justify">Blue Bell</p>
+                </div>
+                <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                    <p class="m-0">Rp. 3.000</p>
+                    <button class="btn btn-sm btn-outline-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 4 0v1h-4Zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="{!! url('assets/img/bluebell.jpg') !!}" alt="blue bell">
+                </div>
+                <div class="card-body">
+                    <p class="m-0 text-justify">Blue Bell</p>
+                </div>
+                <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                    <p class="m-0">Rp. 3.000</p>
+                    <button class="btn btn-sm btn-outline-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 4 0v1h-4Zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="{!! url('assets/img/bluebell.jpg') !!}" alt="blue bell">
+                </div>
+                <div class="card-body">
+                    <p class="m-0 text-justify">Blue Bell</p>
+                </div>
+                <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                    <p class="m-0">Rp. 3.000</p>
+                    <button class="btn btn-sm btn-outline-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 4 0v1h-4Zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="{!! url('assets/img/bluebell.jpg') !!}" alt="blue bell">
+                </div>
+                <div class="card-body">
+                    <p class="m-0 text-justify">Blue Bell</p>
+                </div>
+                <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                    <p class="m-0">Rp. 3.000</p>
+                    <button class="btn btn-sm btn-outline-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 4 0v1h-4Zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <img src="{!! url('assets/img/bluebell.jpg') !!}" alt="blue bell">
+                </div>
+                <div class="card-body">
+                    <p class="m-0 text-justify">Blue Bell</p>
+                </div>
+                <div class="card-footer d-flex flex-row justify-content-between align-items-center">
+                    <p class="m-0">Rp. 3.000</p>
+                    <button class="btn btn-sm btn-outline-danger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 4 0v1h-4Zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
         {{-- ./card produk --}}
     @endsection
