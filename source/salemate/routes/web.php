@@ -22,3 +22,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 Route::get('/transaksi', function () {
     return view('transaksi.index');
 });
+
+Route::get('/produk', function () {
+    return view('produk.index');
+});
