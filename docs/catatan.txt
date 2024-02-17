@@ -1,0 +1,3 @@
+1. mengubah riwayat transaksi
+2. membuat form laporan
+3. mengubah manager => petugas
