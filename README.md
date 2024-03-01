@@ -4,4 +4,4 @@ Repository untuk menyimpan dokumentasi dan source code aplikasi kasir untuk kepe
 kompetensi keahilan
 
 ## SaleMate
-SaleMate adalah aplikasi kasir berbasis web dengan framework Laravel versi 10, memiliki fitur utama yaitu login & registrasi, monitoring produk, monitoring user, dan transaksi
+SaleMate adalah aplikasi kasir berbasis web dengan framework Laravel versi 9, memiliki fitur utama yaitu login, monitoring produk, monitoring user, dan transaksi
