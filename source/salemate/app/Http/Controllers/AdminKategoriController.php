@@ -40,7 +40,6 @@ class AdminKategoriController extends Controller
      */
     public function create()
     {
-        //
         $data = [
             'title'     => 'Tambah Kategori',
             'content'   => 'kategori/create'
@@ -50,7 +49,6 @@ class AdminKategoriController extends Controller
 
     public function createAdmin()
     {
-        //
         $data = [
             'title'     => 'Tambah Kategori',
             'content'   => 'admin/kategori/create'
@@ -68,7 +66,7 @@ class AdminKategoriController extends Controller
     {
         //
         $data = $request->validate([
-            'name'  => 'required|unique:kategoris'
+            'nama_kategori'  => 'required|unique:kategori'
         ]);
         Kategori::create($data);
         Alert::success('Sukses', 'Data Berhasil Ditambahkan');
@@ -81,17 +79,6 @@ class AdminKategoriController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -99,7 +86,6 @@ class AdminKategoriController extends Controller
      */
     public function edit($id)
     {
-        //
         $data = [
             'title'     => 'Edit Kategori',
             'kategori' => Kategori::find($id),
@@ -109,7 +95,6 @@ class AdminKategoriController extends Controller
     }
     public function editAdmin($id)
     {
-        //
         $data = [
             'title'     => 'Edit Kategori',
             'kategori' => Kategori::find($id),
@@ -130,7 +115,7 @@ class AdminKategoriController extends Controller
         //
         $kategori = Kategori::find($id);
         $data = $request->validate([
-            'name'  => 'required|unique:kategoris,name,' . $kategori->id
+            'nama_kategori'  => 'required|unique:kategori,nama_kategori,' . $kategori->id
         ]);
         $kategori->update($data);
         Alert::success('Sukses', 'Data Berhasil Diedit');

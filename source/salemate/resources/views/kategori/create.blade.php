@@ -13,13 +13,16 @@
                         @method('PUT')
                     @else
                     @endisset
-                    <form action="{{ auth()->user()->role == 'petugas' ? '/kategori' : '/admin/kategori/' }}" method="POST"
-                        enctype="multipart/form-data">
+                    <form action="{{ auth()->user()->role == 'petugas' ? '/kategori' : '/admin/kategori/' }}"
+                        method="POST" enctype="multipart/form-data">
                         @csrf
                         <label for="">Nama Kategori</label>
-                        <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
-                            placeholder="Nama Kategori" value="{{ isset($kategori) ? $kategori->name : old('name') }}">
-                        @error('name')
+                        <input type="text" name="nama_kategori"
+                            class="form-control @error('nama_kategori') is-invalid @enderror"
+                            placeholder="Nama Kategori"
+                            value="{{ isset($kategori) ? $kategori->nama_kategori : old('nama_kategori') }}"
+                            autocomplete="off">
+                        @error('nama_kategori')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>

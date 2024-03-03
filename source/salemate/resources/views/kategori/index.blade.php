@@ -10,15 +10,15 @@
                 <table class="table">
                     <tr>
                         <th>No</th>
-                        <th>Name</th>
-                        <th>Action</th>
+                        <th>Nama Kategori</th>
+                        <th>Aksi</th>
 
                     </tr>
 
                     @foreach ($kategori as $item)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $item->name }}</td>
+                            <td>{{ $item->nama_kategori }}</td>
                             <td>
                                 <div class="d-flex">
                                     <a href="{{ auth()->user()->role == 'petugas' ? '/kategori/' . $item->id . '/edit' : '/admin/kategori/' . $item->id . '/edit' }}"
