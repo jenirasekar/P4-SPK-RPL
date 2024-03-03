@@ -16,16 +16,17 @@ class AdminTransaksiDetailController extends Controller
         $id_produk = $request->id_produk;
         $id_transaksi = $request->id;
 
-        $transaksi = Transaksi::find($id_transaksi);
+        $transaksi = Transaksi::where('status', 'pending')
+            ->where('id_pelanggan', $request->id_pelanggan)
+            ->first();
 
         if ($transaksi == null) {
-            $transaksi = Transaksi::where('status', 'pending')->first();
             $transaksi = Transaksi::create([
                 'id_user' => auth()->user()->id,
                 'total' => 0,
                 'dibayarkan' => 0,
                 'kembalian' => 0,
-                'nama_kasir' => auth()->user()->name,
+                'nama_kasir' => auth()->user()->nama,
                 'status' => 'pending',
                 'id_pelanggan' => $request->id_pelanggan
             ]);
