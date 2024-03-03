@@ -3,7 +3,7 @@
         <div class="d-flex justify-content-between">
             <div class="">
                 <h1>Selamat datang</h1>
-                <p>{{ auth()->user()->name }}, Anda login sebagai <span
+                <p>{{ auth()->user()->nama }}, Anda login sebagai <span
                         style="text-transform: capitalize">{{ auth()->user()->role }}</span></p>
             </div>
             <a href="javascript:void(0);">Lihat Laporan</a>
