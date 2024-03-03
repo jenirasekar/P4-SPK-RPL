@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('transaksi_details', function (Blueprint $table) {
+        Schema::create('detail_transaksi', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('transaksi_id');
-            $table->foreign('transaksi_id')->references('id')->on('transaksis');
-            $table->unsignedBigInteger('produk_id')->nullable();
-            $table->foreign('produk_id')->references('id')->on('produks');
-            $table->string('produk_name');
+            $table->foreignId('id_transaksi');
+            $table->foreign('id_transaksi')->references('id')->on('transaksi');
+            $table->unsignedBigInteger('id_produk')->nullable();
+            $table->foreign('id_produk')->references('id')->on('produk');
+            $table->string('nama_produk');
             $table->foreignId('qty');
             $table->foreignId('subtotal');
             $table->timestamps();
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transaksi_details');
+        Schema::dropIfExists('detail_transaksi');
     }
 };

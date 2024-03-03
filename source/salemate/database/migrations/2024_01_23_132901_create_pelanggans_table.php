@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('pelanggans', function (Blueprint $table) {
+        Schema::create('pelanggan', function (Blueprint $table) {
             $table->id();
             $table->string('nama_pelanggan');
             $table->text('alamat');
@@ -21,9 +21,9 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::table('transaksis', function (Blueprint $table) {
-            $table->unsignedBigInteger('pelanggan_id')->nullable();
-            $table->foreign('pelanggan_id')->references('id')->on('pelanggans');
+        Schema::table('transaksi', function (Blueprint $table) {
+            $table->unsignedBigInteger('id_pelanggan')->nullable();
+            $table->foreign('id_pelanggan')->references('id')->on('pelanggan');
         });
     }
 
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pelanggans');
+        Schema::dropIfExists('pelanggan');
     }
 };

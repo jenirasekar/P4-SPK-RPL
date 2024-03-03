@@ -2,11 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\Pelanggan;
+use App\Models\Kategori;
+use App\Models\Produk;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class PelangganSeeder extends Seeder
+class ProdukSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +16,7 @@ class PelangganSeeder extends Seeder
      */
     public function run()
     {
-        Pelanggan::factory()->count(15)->create();
+        $kategori = Kategori::factory()->count(10)->create();
+        Produk::factory()->count(30)->recycle([$kategori])->create();
     }
 }

@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('produks', function (Blueprint $table) {
+        Schema::create('produk', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->foreignId('kategori_id');
-            $table->foreign('kategori_id')->references('id')->on('kategoris');
+            $table->string('nama_produk');
+            $table->foreignId('id_kategori');
+            $table->foreign('id_kategori')->references('id')->on('kategori');
             $table->bigInteger('harga')->default(0);
             $table->integer('stok');
             $table->text('gambar')->nullable();
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('produks');
+        Schema::dropIfExists('produk');
     }
 };
