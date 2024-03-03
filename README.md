@@ -21,7 +21,7 @@ SaleMate adalah aplikasi kasir berbasis web dengan framework Laravel versi 9, me
 10.	Selanjutnya, kita klik sidebar untuk mencoba fitur manajemen kategori. Di fitur ini kita bisa melakukan tambah, edit, dan hapus data produk. 
 11.	Untuk menambahkan manajemen kategori klik tombol tambah di bagian atas. Lalu inputkan nama kategori (seperti makanan dan minuman, dll).
 ### Petugas
-1.	Di halaman petugas ini terdapat 5 fitur yaitu produk, kategori, transaksi, pelanggan, dan laporan.
+1.	Login dengan email "petugas@gmail.com" dan password "123". Di halaman petugas ini terdapat 5 fitur yaitu produk, kategori, transaksi, pelanggan, dan laporan.
 2.	Selanjutnya, kita klik sidebar untuk mencoba fitur manajemen produk. Di fitur ini kita bisa melakukan tambah, edit, dan hapus data produk. 
 3.	Untuk menambahkan manajemen produk klik tombol tambah di bagian atas. Inputkan nama produk, kategori produk, harga produk, stok produk, dan gambar produk. Kemudian klik tombol simpan.
 4.	Di bagian aksi pada gambar diatas terdapat 2 tombol yaitu edit dan hapus. Jika Anda ingin mengedit klik tombol berwarna biru dan jika Anda ingin menghapus klik tombol berwarna merah.
