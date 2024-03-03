@@ -10,7 +10,7 @@
                         <th>Nama Pelanggan</th>
                         <th>Alamat</th>
                         <th>No Telepon</th>
-                        <th>Action</th>
+                        <th>Aksi</th>
                     </tr>
 
                     @foreach ($pelanggan as $item)
