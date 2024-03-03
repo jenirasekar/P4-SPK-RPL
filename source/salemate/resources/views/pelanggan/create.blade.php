@@ -16,7 +16,8 @@
                             <input type="text" name="nama_pelanggan"
                                 class="form-control @error('nama_pelanggan') is-invalid @enderror"
                                 placeholder="Nama pelanggan"
-                                value="{{ isset($pelanggan) ? $pelanggan->nama_pelanggan : old('nama_pelanggan') }}">
+                                value="{{ isset($pelanggan) ? $pelanggan->nama_pelanggan : old('nama_pelanggan') }}"
+                                autocomplete="off">
                             @error('nama_pelanggan')
                                 <div class="invalid-feedback">
                                     {{ $message }}
@@ -35,7 +36,8 @@
                                     <input type="text" name="no_tlp"
                                         class="form-control @error('no_tlp') is-invalid @enderror"
                                         placeholder="Nama pelanggan"
-                                        value="{{ isset($pelanggan) ? $pelanggan->no_tlp : old('no_tlp') }}">
+                                        value="{{ isset($pelanggan) ? $pelanggan->no_tlp : old('no_tlp') }}"
+                                        autocomplete="off">
                                     @error('no_tlp')
                                         <div class="invalid-feedback">
                                             {{ $message }}
