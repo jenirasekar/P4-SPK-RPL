@@ -51,7 +51,7 @@
                         <div class="mt-2">
                             <label for="" class="form-label"> Harga </label>
                             <input type="number" name="harga"
-                                class="form-control @error('harga') is-invalid @enderror" placeholder=" Harga "
+                                class="form-control @error('harga') is-invalid @enderror" placeholder="Harga"
                                 value="{{ isset($produk) ? $produk->harga : old('harga') }}" autocomplete="off">
                             @error('harga')
                                 <div class="invalid-feedback">
