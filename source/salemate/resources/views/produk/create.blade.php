@@ -86,7 +86,6 @@
                         @endisset
                         <br>
 
-                        <a href="/produk" class="btn btn-info mt-2">Kembali</a>
                         <button type="submit" class="btn btn-primary mt-2">Simpan</button>
                     </form>
 

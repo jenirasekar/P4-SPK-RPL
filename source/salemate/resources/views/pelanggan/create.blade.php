@@ -44,7 +44,6 @@
                                         </div>
                                     @enderror
                                 </div>
-                                <a href="/pelanggan" class="btn btn-info mt-2">Kembali</a>
                                 <button type="submit" class="btn btn-primary mt-2">Simpan</button>
                     </form>
             </div>

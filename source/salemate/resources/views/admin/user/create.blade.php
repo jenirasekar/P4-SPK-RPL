@@ -82,7 +82,6 @@
                                 @enderror
                             </div>
 
-                            <a href="/admin/user" class="btn btn-secondary">Kembali</a>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>
                     </form>
