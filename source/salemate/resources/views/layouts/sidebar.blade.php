@@ -1,7 +1,7 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="#" class="brand-link">
-        <span class="brand-text font-weight-light"><b>Kasir</b>Ku</span>
+        <span class="brand-text font-weight-light"><b>Sale</b>Mate</span>
     </a>
     <!-- Sidebar -->
     <div class="sidebar">
