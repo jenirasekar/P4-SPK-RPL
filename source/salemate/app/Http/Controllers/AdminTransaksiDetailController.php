@@ -13,26 +13,27 @@ class AdminTransaksiDetailController extends Controller
 {
     public function store(Request $request)
     {
-        $id_produk = $request->produk_id;
-        $id_transaksi = $request->transaksi_id;
+        $id_produk = $request->id_produk;
+        $id_transaksi = $request->id;
 
         $transaksi = Transaksi::find($id_transaksi);
+        dd($transaksi);
 
         if ($transaksi == null) {
             $transaksi = Transaksi::where('status', 'pending')->first();
             $transaksi = Transaksi::create([
-                'user_id' => auth()->user()->id,
+                'id_user' => auth()->user()->id,
                 'total' => 0,
                 'dibayarkan' => 0,
                 'kembalian' => 0,
-                'kasir_name' => auth()->user()->name,
+                'nama_kasir' => auth()->user()->name,
                 'status' => 'pending',
-                'pelanggan_id' => $request->pelanggan_id
+                'id_pelanggan' => $request->id_pelanggan
             ]);
         }
 
-        $detail_transaksi = TransaksiDetail::where('produk_id', $id_produk)
-            ->where('transaksi_id', $transaksi->id)
+        $detail_transaksi = TransaksiDetail::where('id_produk', $id_produk)
+            ->where('id_transaksi', $transaksi->id)
             ->first();
 
         $produk = Produk::find($id_produk);
@@ -45,11 +46,10 @@ class AdminTransaksiDetailController extends Controller
 
         if ($detail_transaksi == null) {
             $produk = Produk::where('stok', '>', 0)->find($id_produk);
-
             $data = [
-                'produk_id' => $id_produk,
-                'produk_name' => $produk->name,
-                'transaksi_id'  => $transaksi->id,
+                'id_produk' => $id_produk,
+                'nama_produk' => $produk->nama_produk,
+                'id_transaksi'  => $transaksi->id,
                 'qty'  => $reqQty,
                 'subtotal'  => $request->subtotal,
             ];
@@ -77,22 +77,22 @@ class AdminTransaksiDetailController extends Controller
 
     public function pendingTransaksi(Request $request)
     {
-        $id_pelanggan = $request->pelanggan_id;
+        $id_pelanggan = $request->id_pelanggan;
         $data = [
             'details' => [],
-            'transaksi_id' => null,
+            'id_transaksi' => null,
             'total' => 0
         ];
         if ($id_pelanggan != null) {
             $transaksi = Transaksi::where('status', 'pending')
-                ->where('pelanggan_id', $id_pelanggan)
+                ->where('id_pelanggan', $id_pelanggan)
                 ->first();
-            $details = TransaksiDetail::where('transaksi_id', $transaksi->id)->get();
-            $total = TransaksiDetail::where('transaksi_id', $transaksi->id)->sum('subtotal');
+            $details = TransaksiDetail::where('id_transaksi', $transaksi->id)->get();
+            $total = TransaksiDetail::where('id_transaksi', $transaksi->id)->sum('subtotal');
         }
         $data = [
             'details' => $details,
-            'transaksi_id' => $transaksi->id,
+            'id_transaksi' => $transaksi->id,
             'total' => $total
         ];
 
@@ -105,7 +105,7 @@ class AdminTransaksiDetailController extends Controller
         $detail_transaksi = TransaksiDetail::find($id);
 
         if ($detail_transaksi) {
-            $transaksi = Transaksi::find($detail_transaksi->transaksi_id);
+            $transaksi = Transaksi::find($detail_transaksi->id_transaksi);
 
             if ($transaksi) {
                 $data = [
@@ -114,7 +114,7 @@ class AdminTransaksiDetailController extends Controller
                 $transaksi->update($data);
             }
 
-            $produk = Produk::find($detail_transaksi->produk_id);
+            $produk = Produk::find($detail_transaksi->id_produk);
             // ngambil stok lama
             $old_stok = $produk->stok;
             // kalkulasi stok
@@ -135,24 +135,24 @@ class AdminTransaksiDetailController extends Controller
     {
         $id_transaksi = $request->id;
         $transaksi = Transaksi::find($id_transaksi);
-        $data_struk = DB::table('transaksis')
-            ->join('transaksi_details', 'transaksi_details.transaksi_id', '=', 'transaksis.id')
-            ->join('produks', 'produks.id', '=', 'transaksi_details.produk_id')
-            ->leftJoin('pelanggans', 'pelanggans.id', '=', 'transaksis.pelanggan_id')
+        $data_struk = DB::table('transaksi')
+            ->join('detail_transaksi', 'detail_transaksi.id_transaksi', '=', 'transaksi.id')
+            ->join('produk', 'produk.id', '=', 'detail_transaksi.id_produk')
+            ->leftJoin('pelanggan', 'pelanggan.id', '=', 'transaksi.id_pelanggan')
             ->select(
-                'transaksis.id as transaksi_id',
-                'transaksis.kasir_name',
-                'transaksis.total',
-                'transaksis.dibayarkan',
-                'transaksis.kembalian',
-                'transaksis.created_at',
-                'transaksi_details.produk_name',
-                'transaksi_details.qty',
-                'transaksi_details.subtotal',
-                'produks.harga as harga_produk',
-                'pelanggans.nama_pelanggan',
-                DB::raw('transaksi_details.qty * produks.harga as subtotal_produk')
-            )->where('transaksis.id', $id_transaksi)
+                'transaksi.id as id_transaksi',
+                'transaksi.nama_kasir',
+                'transaksi.total',
+                'transaksi.dibayarkan',
+                'transaksi.kembalian',
+                'transaksi.created_at',
+                'detail_transaksi.nama_produk',
+                'detail_transaksi.qty',
+                'detail_transaksi.subtotal',
+                'produk.harga as harga_produk',
+                'pelanggan.nama_pelanggan',
+                DB::raw('detail_transaksi.qty * produk.harga as subtotal_produk')
+            )->where('transaksi.id', $id_transaksi)
             ->get();
         $timestamp = Carbon::now()->format('YmdHis');
         $filename = 'struk_' . $timestamp . '.pdf';

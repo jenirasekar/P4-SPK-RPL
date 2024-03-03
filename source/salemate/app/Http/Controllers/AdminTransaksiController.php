@@ -33,11 +33,11 @@ class AdminTransaksiController extends Controller
      */
     public function create()
     {
-        $transaksi_id =  request('id');
-        $transaksi = Transaksi::find($transaksi_id);
-        $detail_transaksi = TransaksiDetail::where('transaksi_id', $transaksi_id)->get();
-        $pelanggan_id = request('id');
-        $pelanggan = Pelanggan::find($pelanggan_id);
+        $id_transaksi =  request('id');
+        $transaksi = Transaksi::find($id_transaksi);
+        $detail_transaksi = TransaksiDetail::where('id_transaksi', $id_transaksi)->get();
+        $id_pelanggan = request('id');
+        $pelanggan = Pelanggan::find($id_pelanggan);
         $pelanggan_list = Pelanggan::all();
         $produk = Produk::where('stok', '>', 0)->get();
         $produk_id = request('produk_id');
@@ -64,9 +64,8 @@ class AdminTransaksiController extends Controller
      */
     public function store(Request $request)
     {
-        $transaksi_id =  request('transaksi_id');
-        $transaksi = Transaksi::find($transaksi_id);
-
+        $id_transaksi =  request('id');
+        $transaksi = Transaksi::find($id_transaksi);
         $data = [
             'total'     => $request->total,
             'dibayarkan' => $request->dibayarkan,

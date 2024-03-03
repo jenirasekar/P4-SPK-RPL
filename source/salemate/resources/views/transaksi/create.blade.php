@@ -2,15 +2,15 @@
     <div class="card-body">
         <form action="{{ route('detailtransaksi.store') }}" method="post" id="form_detail_transaksi">
             @csrf
-            <input type="hidden" name="produk_name" id="nama_produk" value="">
-            <input type="hidden" name="transaksi_id" id="transaksi_id" value="">
+            <input type="hidden" name="nama_produk" id="nama_produk" value="">
+            <input type="hidden" name="id_transaksi" id="id_transaksi" value="">
             <input type="hidden" name="subtotal" id="subtotal">
             <div class="form-group row">
                 <div class="col-2">
                     <label for="id_pelanggan">Pelanggan</label>
                 </div>
                 <div class="col-10">
-                    <select name="pelanggan_id" id="id_pelanggan" class="form-control">
+                    <select name="id_pelanggan" id="id_pelanggan" class="form-control">
                         <option value="">Nama Pelanggan</option>
                         @foreach ($pelanggan_list as $item)
                             <option value="{{ $item->id }}">{{ $item->nama_pelanggan }}</option>
@@ -23,10 +23,11 @@
                     <label for="id_produk">Kode produk</label>
                 </div>
                 <div class="col-10">
-                    <select name="produk_id" id="id_produk" class="form-control">
+                    <select name="id_produk" id="id_produk" class="form-control">
                         <option value="">Pilih produk</option>
                         @foreach ($produk as $item)
-                            <option value="{{ $item->id }}" data-harga="{{ $item->harga }}">{{ $item->name }} -
+                            <option value="{{ $item->id }}" data-harga="{{ $item->harga }}">
+                                {{ $item->nama_produk }} -
                                 ({{ $item->stok }})
                             </option>
                         @endforeach
@@ -69,7 +70,7 @@
             <tbody id="tbody_produk">
                 @foreach ($detail_transaksi as $item)
                     <tr>
-                        <td>{{ $item->produk_name }}</td>
+                        <td>{{ $item->nama_produk }}</td>
                         <td>{{ $item->qty }}</td>
                         <td class="subtotalcol">{{ $item->subtotal }}</td>
                         <td>
@@ -105,7 +106,7 @@
             </div>
             <form action="{{ route('transaksi.store') }}" method="post" id="form_transaksi">
                 @csrf
-                <input type="hidden" name="transaksi_id" id="transaksi_id">
+                <input type="hidden" name="id_transaksi" id="id_transaksi">
                 <div class="modal-body">
                     <div class="mb-2">
                         <label for="total">Total</label>
@@ -160,14 +161,14 @@
                 type: 'GET',
                 url: "{{ route('detailtransaksi.pending') }}",
                 data: {
-                    'pelanggan_id': $('#id_pelanggan').val()
+                    'id_pelanggan': $('#id_pelanggan').val()
                 },
                 success: function(response) {
                     $('#tbody_produk').empty();
                     let details = response.details;
                     details.forEach(detail => {
                         let newRow = `<tr id='detail-${detail.id}'>
-                        <td>${detail.produk_name}</td>
+                        <td>${detail.nama_produk}</td>
                         <td>${detail.qty}</td>
                         <td class="subtotalcol">${detail.subtotal}</td>
                         <td>
@@ -181,7 +182,7 @@
                     $('#total').val(total);
                     // total dalam modal
                     $('#total-belanja').val(total);
-                    $('#transaksi_id').val(response.transaksi_id);
+                    $('#id_transaksi').val(response.id_transaksi);
                 }
             });
         });
@@ -197,7 +198,7 @@
                 data: $('#form_detail_transaksi').serialize(),
                 success: function(response) {
                     let newRow = `<tr id='detail-${response.id}'>
-                        <td>${response.produk_name}</td>
+                        <td>${response.nama_produk}</td>
                         <td>${response.qty}</td>
                         <td class="subtotalcol">${response.subtotal}</td>
                         <td>
@@ -218,7 +219,7 @@
 
                     // total dalam modal
                     $('#total-belanja').val(total);
-                    $('#transaksi_id').val(response.transaksi_id);
+                    $('#id_transaksi').val(response.id_transaksi);
                     // clear input fields
                     $('#id_produk, #harga, #qty, #subtotal').val('');
                 },
@@ -249,7 +250,7 @@
                         $('#total-belanja').val($('#total').val());
 
                         $('#nama_produk').val(response.produk_name);
-                        $('#transaksi_id').val(response.transaksi_id);
+                        $('#id_transaksi').val(response.id_transaksi);
 
                         // clear input fields
                         $('#id_produk, #harga, #qty, #subtotal').val('');
@@ -286,7 +287,8 @@
             var dibayarkanValue = $("#dibayarkan").val();
             var kembalianValue = $("#kembalian-belanja").val();
             var totalValue = $("#total-belanja").val();
-            var transaksi_id = $("#transaksi_id").val();
+            var id_transaksi = $("#id_transaksi").val();
+            console.log(id_transaksi)
             $.ajax({
                 type: 'POST',
                 url: $('#form_transaksi').attr('action'),
@@ -294,14 +296,14 @@
                     dibayarkan: dibayarkanValue,
                     kembalian: kembalianValue,
                     total: totalValue,
-                    transaksi_id: transaksi_id
+                    id: id_transaksi
                 },
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
                 success: function(response) {
                     if (response.success) {
-                        window.open("{{ route('cetakStruk') }}?id=" + transaksi_id);
+                        window.open("{{ route('cetakStruk') }}?id=" + id_transaksi);
                         window.location = "{{ route('transaksi.monit') }}";
                     } else {
                         alert('Pembayaran gagal!');

@@ -89,7 +89,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <p>Kasir: {{ $transaksi->kasir_name }}</p>
+                            <p>Kasir: {{ $transaksi->nama_kasir }}</p>
                         </td>
                     </tr>
                 </table>
@@ -117,7 +117,7 @@
                         @foreach ($data_struk as $item)
                             <tr>
                                 <td>
-                                    <p>{{ $item->produk_name }}</p>
+                                    <p>{{ $item->nama_produk }}</p>
                                 </td>
                                 <td>
                                     <p>{{ $item->harga_produk }}</p>
