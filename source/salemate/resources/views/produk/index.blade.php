@@ -10,7 +10,7 @@
                 <table class="table">
                     <tr>
                         <th>No</th>
-                        <th>Nama</th>
+                        <th>Nama Produk</th>
                         <th>Harga</th>
                         <th>Stok</th>
                         <th>Gambar</th>
@@ -20,7 +20,7 @@
                     @foreach ($produk as $item)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $item->name }}</td>
+                            <td>{{ $item->nama_produk }}</td>
                             <td>{{ $item->harga }}</td>
                             <td>{{ $item->stok }}</td>
                             <td><img src="{{ Storage::url('public/produk/' . $item->gambar) }}" alt="gambar produk"

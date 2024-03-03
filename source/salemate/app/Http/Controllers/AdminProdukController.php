@@ -70,8 +70,8 @@ class AdminProdukController extends Controller
     {
         //
         $request->validate([
-            'name'  => 'required',
-            'kategori_id'  => 'required',
+            'nama_produk'  => 'required',
+            'id_kategori'  => 'required',
             'harga'  => 'required|numeric',
             'stok'  => 'required|numeric',
             'gambar' => 'nullable|image|mimes:jpg,jpeg,png,svg,gif,jfif,webp',
@@ -81,8 +81,8 @@ class AdminProdukController extends Controller
         $image->storeAs('public/produk/', $image->hashName());
 
         Produk::create([
-            'name'  => $request->name,
-            'kategori_id'  => $request->kategori_id,
+            'nama_produk'  => $request->nama_produk,
+            'id_kategori'  => $request->id_kategori,
             'harga'  => $request->harga,
             'stok'  => $request->stok,
             'gambar' => $image->hashName(),
@@ -97,18 +97,6 @@ class AdminProdukController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -116,7 +104,6 @@ class AdminProdukController extends Controller
      */
     public function edit($id)
     {
-        //
         $data = [
             'title'     => 'Edit Produk',
             'produk' => Produk::find($id),
@@ -128,7 +115,6 @@ class AdminProdukController extends Controller
 
     public function editAdmin($id)
     {
-        //
         $data = [
             'title'     => 'Edit Produk',
             'produk' => Produk::find($id),
@@ -147,11 +133,10 @@ class AdminProdukController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
         $produk = Produk::find($id);
         $request->validate([
-            'name'  => 'required',
-            'kategori_id'  => 'required',
+            'nama_produk'  => 'required',
+            'id_kategori'  => 'required',
             'harga'  => 'required|numeric',
             'stok'  => 'required|numeric',
         ]);
@@ -166,8 +151,8 @@ class AdminProdukController extends Controller
 
             $produk->update([
                 'gambar' => $image->hashName(),
-                'name'  => $request->name,
-                'kategori_id'  => $request->kategori_id,
+                'nama_produk'  => $request->nama_produk,
+                'id_kategori'  => $request->id_kategori,
                 'harga'  => $request->harga,
                 'stok'  => $request->stok,
                 'tgl_produksi'  => $request->tgl_produksi,
@@ -175,8 +160,8 @@ class AdminProdukController extends Controller
             ]);
         } else {
             $produk->update([
-                'name'  => $request->name,
-                'kategori_id'  => $request->kategori_id,
+                'nama_produk'  => $request->nama_produk,
+                'id_kategori'  => $request->id_kategori,
                 'harga'  => $request->harga,
                 'stok'  => $request->stok,
                 'tgl_produksi'  => $request->tgl_produksi,
@@ -201,12 +186,7 @@ class AdminProdukController extends Controller
      */
     public function destroy($id)
     {
-        // $kategori = Kategori::find($id);
         $produk = Produk::find($id);
-        // if ($produk->gambar != null) {
-        //     unlink($produk->gambar);
-
-        // }
         $produk->delete();
         Alert::success('Sukses', 'Data Berhasil Dihapus');
 

@@ -19,10 +19,12 @@
                         @csrf
                         <div>
                             <label for="" class="form-label">Nama Produk</label>
-                            <input type="text" name="name"
-                                class="form-control @error('name') is-invalid @enderror" placeholder="Nama Produk"
-                                value="{{ isset($produk) ? $produk->name : old('name') }}">
-                            @error('name')
+                            <input type="text" name="nama_produk"
+                                class="form-control @error('nama_produk') is-invalid @enderror"
+                                placeholder="Nama Produk"
+                                value="{{ isset($produk) ? $produk->nama_produk : old('nama_produk') }}"
+                                autocomplete="off">
+                            @error('nama_produk')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
@@ -30,17 +32,17 @@
                         </div>
                         <div class="mt-2">
                             <label for="" class="form-label">Nama Kategori</label>
-                            <select name="kategori_id" class="form-control @error('kategori_id') is-invalid @enderror"
+                            <select name="id_kategori" class="form-control @error('id_kategori') is-invalid @enderror"
                                 id="">
                                 <option value="">--Kategori--</option>
 
                                 @foreach ($kategori as $item)
                                     <option value=" {{ $item->id }} "
-                                        {{ isset($produk) ? ($item->id == $produk->kategori_id ? 'selected' : '') : '' }}>
-                                        {{ $item->name }} </option>
+                                        {{ isset($produk) ? ($item->id == $produk->id_kategori ? 'selected' : '') : '' }}>
+                                        {{ $item->nama_kategori }} </option>
                                 @endforeach
                             </select>
-                            @error('kategori_id')
+                            @error('id_kategori')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
@@ -50,7 +52,7 @@
                             <label for="" class="form-label"> Harga </label>
                             <input type="number" name="harga"
                                 class="form-control @error('harga') is-invalid @enderror" placeholder=" Harga "
-                                value="{{ isset($produk) ? $produk->harga : old('harga') }}">
+                                value="{{ isset($produk) ? $produk->harga : old('harga') }}" autocomplete="off">
                             @error('harga')
                                 <div class="invalid-feedback">
                                     {{ $message }}
@@ -61,7 +63,7 @@
                             <label for="" class="form-label"> Stok</label>
                             <input type="number" name="stok"
                                 class="form-control @error('stok') is-invalid @enderror" placeholder="Stok"
-                                value="{{ isset($produk) ? $produk->stok : old('stok') }}">
+                                value="{{ isset($produk) ? $produk->stok : old('stok') }}" autocomplete="off">
                             @error('stok')
                                 <div class="invalid-feedback">
                                     {{ $message }}
