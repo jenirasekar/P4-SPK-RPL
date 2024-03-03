@@ -17,7 +17,6 @@ class AdminUserController extends Controller
      */
     public function index()
     {
-        //
         $data = [
             'title'     => 'Manajemen User',
             'user'      => User::get(),
@@ -28,7 +27,6 @@ class AdminUserController extends Controller
 
     public function indexDashboard()
     {
-        //
         $data = [
             'content'   => 'dashboard.index'
         ];
@@ -58,7 +56,7 @@ class AdminUserController extends Controller
     {
         //
         $data = $request->validate([
-            'name'  => 'required',
+            'nama'  => 'required',
             'email'  => 'required|email|unique:users',
             'password'  => 'required',
             're_password'  => 'required|same:password',
@@ -69,19 +67,8 @@ class AdminUserController extends Controller
         $data['password'] = Hash::make($data['password']);
 
         User::create($data);
-        Alert::success('Sukses ', 'Data telah ditambahkan!!');
-        return redirect('/admin/user')->with('success', 'Data telah ditambahkan!!');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        Alert::success('Sukses ', 'Data telah ditambahkan!');
+        return redirect('/admin/user');
     }
 
     /**
@@ -92,7 +79,6 @@ class AdminUserController extends Controller
      */
     public function edit($id)
     {
-        //
         $data = [
             'user'      => User::find($id),
             'content'   => 'admin.user.create'
@@ -109,12 +95,10 @@ class AdminUserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
         $user = User::find($id);
         $data = $request->validate([
-            'name'  => 'required',
+            'nama'  => 'required',
             'email'  => 'required|email|unique:users,email,' . $user->id,
-            // 'password'  => 'required',
             're_password'  => 'same:password',
             'role' => 'required',
 
@@ -125,10 +109,10 @@ class AdminUserController extends Controller
         } else {
             $data['password']   = $user->password;
         }
-
         $user->update($data);
-        Alert::success('Sukses ', 'Data telah diedit!!');
-        return redirect('/admin/user')->with('success', 'Data telah diedit!!');
+        Alert::success('Sukses ', 'Data telah diedit!');
+
+        return redirect('/admin/user');
     }
 
     /**
@@ -139,10 +123,10 @@ class AdminUserController extends Controller
      */
     public function destroy(int $id)
     {
-        //
         $user = User::find($id);
         $user->delete();
-        Alert::success('Sukses ', 'Data telah dihapus!!');
-        return redirect('/admin/user')->with('success', 'Data telah dihapus!!');
+        Alert::success('Sukses ', 'Data telah dihapus!');
+
+        return redirect('/admin/user');
     }
 }
