@@ -9,18 +9,20 @@
                     <thead>
                         <tr>
                             <th style="padding: 8px; text-align: left;">No</th>
-                            <th style="padding: 8px; text-align: left;">ID Transaksi</th>
-                            <th style="padding: 8px; text-align: left;">Total</th>
                             <th style="padding: 8px; text-align: left;">Tanggal & Waktu</th>
+                            <th style="padding: 8px; text-align: left;">ID Transaksi</th>
+                            <th style="padding: 8px; text-align: left;">ID Pelanggan</th>
+                            <th style="padding: 8px; text-align: left;">Total</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($transaksi as $item)
                             <tr>
                                 <td style="padding: 8px;">{{ $loop->iteration }}</td>
-                                <td style="padding: 8px;">{{ $item->id }}</td>
-                                <td style="padding: 8px;">{{ $item->total }}</td>
                                 <td style="padding: 8px;">{{ $item->created_at }}</td>
+                                <td style="padding: 8px;">{{ $item->id }}</td>
+                                <td style="padding: 8px;">{{ $item->id_pelanggan }}</td>
+                                <td style="padding: 8px;">{{ $item->total }}</td>
                             </tr>
                         @endforeach
                     </tbody>
