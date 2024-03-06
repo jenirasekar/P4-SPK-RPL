@@ -15,59 +15,60 @@
     <style>
         body {
             font-family: 'Source Sans Pro', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .table {
-            width: 100%;
-            margin-bottom: 1rem;
-            color: #212529;
-        }
-
-        .table td,
-        .table th {
-            padding: 0.75rem;
-            vertical-align: top;
-            border-top: 1px solid #dee2e6;
-        }
-
-        .table thead th {
-            vertical-align: bottom;
-        }
-
-        .table tbody+tbody {
-            border-top: 2px solid #dee2e6;
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
         }
 
         .card {
-            margin: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
         .card-body {
-            padding: 15px;
+            padding: 20px;
         }
 
         .text-center {
             text-align: center;
         }
 
-        .d-flex {
-            display: flex;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
         }
 
-        .col-2 {
-            flex: 2;
+        .th-detail,
+        .td-detail {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
         }
 
-        .col-10 {
-            flex: 8;
+        .th-detail {
+            background-color: #f2f2f2;
+        }
+
+        hr {
+            margin: 20px 0;
         }
 
         .row {
-            display: flex;
+            margin-bottom: 10px;
         }
 
-        .gap-1 {
-            gap: 0.25rem;
+        .row b {
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -84,12 +85,15 @@
                             <p>ID: #{{ $transaksi->id }}</p>
                         </td>
                         <td>
-                            <p>{{ $transaksi->created_at }}</p>
+                            <p>ID Pelanggan: #{{ $transaksi->id_pelanggan }}</p>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <p>Kasir: {{ $transaksi->nama_kasir }}</p>
+                        </td>
+                        <td>
+                            <p>{{ $transaksi->created_at }}</p>
                         </td>
                     </tr>
                 </table>
@@ -99,16 +103,16 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>
+                            <th class="th-detail">
                                 <label for="" class="form-label">Produk</label>
                             </th>
-                            <th>
+                            <th class="th-detail">
                                 <label for="" class="form-label">Harga</label>
                             </th>
-                            <th>
+                            <th class="th-detail">
                                 <label for="" class="form-label">QTY</label>
                             </th>
-                            <th>
+                            <th class="th-detail">
                                 <label for="" class="form-label">Subtotal produk</label>
                             </th>
                         </tr>
@@ -116,16 +120,16 @@
                     <tbody>
                         @foreach ($data_struk as $item)
                             <tr>
-                                <td>
+                                <td class="td-detail">
                                     <p>{{ $item->nama_produk }}</p>
                                 </td>
-                                <td>
+                                <td class="td-detail">
                                     <p>{{ $item->harga_produk }}</p>
                                 </td>
-                                <td>
+                                <td class="td-detail">
                                     <p>{{ $item->qty }}</p>
                                 </td>
-                                <td>
+                                <td class="td-detail">
                                     <p>{{ $item->subtotal_produk }}</p>
                                 </td>
                             </tr>
@@ -133,7 +137,6 @@
                     </tbody>
                 </table>
             </div>
-
             <hr>
             <div class="card-body">
                 <div class="row">
@@ -146,7 +149,6 @@
                     <p><b>Kembalian: </b>{{ $transaksi->kembalian }}</p>
                 </div>
             </div>
-
         </div>
         <hr>
         <div class="card-body text-center">
