@@ -48,7 +48,7 @@ class PelangganController extends Controller
         $data = $request->validate([
             'nama_pelanggan'  => 'required',
             'alamat'          => 'required',
-            'no_tlp'          => 'required'
+            'no_tlp'          => 'required|min:11|max:13'
         ]);
         Pelanggan::create($data);
         Alert::success('Sukses', 'Data Berhasil Ditambahkan');
@@ -96,7 +96,7 @@ class PelangganController extends Controller
         $data = $request->validate([
             'nama_pelanggan'  => 'required',
             'alamat'          => 'required',
-            'no_tlp'          => 'required',
+            'no_tlp'          => 'required|min:11|max:13',
         ]);
         $pelanggan->update($data);
         Alert::success('Sukses', 'Data Berhasil Diedit');
